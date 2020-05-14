@@ -8,11 +8,15 @@
 -- Events Table
 -- ID
 -- Name
+-- Location
+-- Date
+-- Description
 
 
 -- Interests Table
 -- ID
 -- Name
+-- Interest description
 
 
 -- Users Events Join Table
