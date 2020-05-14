@@ -13,9 +13,10 @@ const connection = mysql.createConnection({
     database: "questivalDB"
 });
 
-connection.connect(function (err) {
-    if (err) throw err;
-});
+
+// connection.connect(function (err) {
+//     if (err) throw err;
+// });
 
 // Export the connection.
 module.exports = connection;
