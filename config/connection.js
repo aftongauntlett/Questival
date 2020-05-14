@@ -1,6 +1,6 @@
-// Set up connection to database and export connection
+// Set up the connection to the database and export that connection
 
-// Boiler Plate Connection 
+// Boiler Plate Connection copied from activity files
 var mysql = require("mysql");
 
 const connection = mysql.createConnection({
@@ -8,15 +8,11 @@ const connection = mysql.createConnection({
     port: 3306,
     user: "root",
 
-    //adding process.env so I don't have to show my password in code ("PASSWORD= ___ node server.js")
+    //adding process.env (accessing the environment variable password) so I don't have to show my password in code ("PASSWORD= ___ node server.js")
     password: process.env.PASSWORD,
     database: "questivalDB"
 });
 
-
-// connection.connect(function (err) {
-//     if (err) throw err;
-// });
 
 // Export the connection.
 module.exports = connection;
