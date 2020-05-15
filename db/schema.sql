@@ -31,3 +31,25 @@ CREATE TABLE interest (
   interest_desc varchar(255) NOT NULL,
   PRIMARY KEY (id)
 );
+
+--Create attendeeInt table.
+CREATE TABLE attendeeInt (
+  id int NOT NULL AUTO_INCREMENT,
+  attendee_name varchar(100) NOT NULL,
+  PRIMARY KEY (id)
+  FOREIGN KEY
+  (interest) REFERENCES interest
+  (interest),
+
+);
+
+--Create attendeeEvent table.
+CREATE TABLE attendeeEvent (
+  id int NOT NULL AUTO_INCREMENT,
+  attendee_name varchar(100) NOT NULL,
+  PRIMARY KEY (id)
+  FOREIGN KEY
+  (event_name) REFERENCES event
+  (event_name),
+
+);
