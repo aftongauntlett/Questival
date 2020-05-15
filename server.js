@@ -23,6 +23,7 @@ app.use(userRoutes);
 app.use(interestRoutes);
 
 app.get("/", function (req, res) {
+    
     res.render("index")
 })
 

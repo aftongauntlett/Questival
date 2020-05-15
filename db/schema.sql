@@ -24,6 +24,14 @@ CREATE TABLE event (
   PRIMARY KEY (id)
 );
 
+DROP DATABASE IF EXISTS questivalDB;
+CREATE DATABASE questivalDB;
+USE questivalDB;
+CREATE TABLE user (
+id INTEGER AUTO_INCREMENT PRIMARY KEY, 
+attendee_name VARCHAR(100) NOT NULL
+);
+
 -- Create interest table.
 CREATE TABLE interest (
   id int NOT NULL AUTO_INCREMENT,
