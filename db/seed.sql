@@ -26,7 +26,7 @@ VALUES ("Frankie Foxears");
 INSERT INTO event (event_name, event_desc, event_location, event_date)
 VALUES ("MAGFest", "Annual festival in the DC Metro area celebrating video games, and video game music, as well as surrounding and adjacent culture", "National Harbor, MD", "Jan 2021" );
 INSERT INTO event (event_name, event_desc, event_location, event_date)
-VALUES ("Otakon", "Promotes the appreciation of Asian culture, primarily through media and entertainment." "Washington, DC", "no date for 2021");
+VALUES ("Otakon", "Promotes the appreciation of Asian culture, primarily through media and entertainment.", "Washington, DC", "no date for 2021");
 INSERT INTO event (event_name, event_desc, event_location, event_date)
 VALUES ("Comic Con", "An event with a primary focus on comic books, and comic book culture.", "San Diego, CA", "July 2021" );
 INSERT INTO event (event_name, event_desc, event_location, event_date)
