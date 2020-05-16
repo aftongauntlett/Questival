@@ -36,10 +36,10 @@ CREATE TABLE interest (
 CREATE TABLE attendeeInt (
   id int NOT NULL AUTO_INCREMENT,
   attendee_name varchar(100) NOT NULL,
-  PRIMARY KEY (id)
+  PRIMARY KEY (id),
   FOREIGN KEY
-  (interest) REFERENCES interest
-  (interest),
+  (interest_id) REFERENCES interest
+  (id),
 
 );
 
@@ -47,9 +47,9 @@ CREATE TABLE attendeeInt (
 CREATE TABLE attendeeEvent (
   id int NOT NULL AUTO_INCREMENT,
   attendee_name varchar(100) NOT NULL,
-  PRIMARY KEY (id)
+  PRIMARY KEY (id),
   FOREIGN KEY
-  (event_name) REFERENCES event
-  (event_name),
+  (event_id) REFERENCES event
+  (id)
 
 );
