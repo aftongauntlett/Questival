@@ -1,6 +1,5 @@
 
 
--- Drops the database if it already exists --
 DROP DATABASE IF EXISTS questival_db;
 
 -- Create the database for QUESTival
@@ -24,6 +23,7 @@ CREATE TABLE event (
   PRIMARY KEY (id)
 );
 
+
 -- Create interest table.
 CREATE TABLE interest (
   id int NOT NULL AUTO_INCREMENT,
@@ -31,3 +31,4 @@ CREATE TABLE interest (
   interest_desc varchar(255) NOT NULL,
   PRIMARY KEY (id)
 );
+
