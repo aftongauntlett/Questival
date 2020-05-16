@@ -10,7 +10,7 @@ const connection = mysql.createConnection({
 
     //adding process.env (accessing the environment variable password) so I don't have to show my password in code ("PASSWORD= ___ node server.js")
     password: process.env.PASSWORD,
-    database: "questivalDB"
+    database: "questival_db"
 });
 
 
