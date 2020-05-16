@@ -1,3 +1,4 @@
+
 DROP DATABASE IF EXISTS questival_db;
 
 -- Create the database for QUESTival
@@ -20,3 +21,4 @@ CREATE TABLE event (
   event_date varchar  (20) NOT NULL,
   PRIMARY KEY (id)
 );
+
