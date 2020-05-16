@@ -32,3 +32,18 @@ CREATE TABLE interest (
   PRIMARY KEY (id)
 );
 
+--JOIN TABLES ADDED 5/16
+
+CREATE TABLE users_interest (
+  id int NOT NULL AUTO_INCREMENT,
+  user_id int,
+  interest_id int,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE users_events (
+  id int NOT NULL AUTO_INCREMENT,
+  user_id int,
+  event_id int,
+  PRIMARY KEY (id)
+);
