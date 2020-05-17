@@ -7,6 +7,8 @@ router.get("/users", function (req, res) {
     })
 })
 
+
+
 router.get("/users/:id", function (req, res) {
     user.getEventsUsersAndInterests(req.params.id, (result, events, interests) => {
         console.log(JSON.stringify(result))
