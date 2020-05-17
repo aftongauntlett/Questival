@@ -1,0 +1,9 @@
+<h1>Interest List Page</h1>
+{{#each interests}}
+<p><a href="/interests/{{id}}">Name: {{this.interest}}</a></p>
+<p><a href="/interests/{{id}}">Description: {{this.interest_desc}}</a></p>
+
+{{/each}}
+
+{{!-- button to create a new event --}}
+<a href="/interests/new">Create a new interest</a>
