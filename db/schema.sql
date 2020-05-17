@@ -30,7 +30,7 @@ CREATE TABLE interest (
   PRIMARY KEY (id)
 );
 
---JOIN TABLES ADDED 5/16
+-- JOIN TABLES ADDED 5/16
 
 CREATE TABLE users_interest (
   id int NOT NULL AUTO_INCREMENT,
