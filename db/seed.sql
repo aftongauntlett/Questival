@@ -1,3 +1,5 @@
+USE questival_db;
+
 INSERT INTO user (attendee_name)
 VALUES ("Jane Jamout");
 INSERT INTO user (attendee_name)

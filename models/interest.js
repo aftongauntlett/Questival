@@ -26,8 +26,8 @@ const interest = {
     // pulling from the join tables here, connecting info from the user and interests tables to the events description page.
     getWithUsersAndEvents(id, callback) {
         let query = "SELECT * FROM interest WHERE id = " + id;
-        let userQuery = "SELECT * FROM user INNER JOIN users_events ON user.id = users_interest.user_id where users_interest.interest_id = " + id;
-        let interestQuery = "SELECT * FROM event INNER JOIN interest_events ON event.id = interest_events.event_id where interest_events.interest_id = " + id;
+        let userQuery = "SELECT * FROM user INNER JOIN users_interest ON user.id = users_interest.user_id where users_interest.interest_id = " + id;
+        let eventQuery = "SELECT * FROM event INNER JOIN interest_events ON event.id = interest_events.event_id where interest_events.interest_id = " + id;
 
         connection.query(query, (err, res) => {
             if (err) throw err;
