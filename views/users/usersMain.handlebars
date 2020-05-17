@@ -1,10 +1,12 @@
 <h1>Attendees</h1>
 
 <div id="usersList" class="d-flex flex-wrap justify-content-center">
+
   {{#each users}}
   <div id="listCards" class="card m-3">
     <div class="card-body">
       <h2 class="card-title"></h2><a href="/users/{{this.id}}"> {{this.attendee_name}}</a>
+
     </div>
   </div>
   {{/each}}
