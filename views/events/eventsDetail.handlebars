@@ -1,22 +1,28 @@
-{{event.event_name}}
+<div class="card" style="width: 18rem;">
+    <div class="card-header">
+        {{event.event_name}}
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <h2>Attendee List</h2>
+            <ul>
+                {{#each users}}
+                <li>
+                    {{attendee_name}}
+                </li>
+                {{/each}}
+            </ul>
+        </li>
+        <li class="list-group-item">
+            <h2>Interests List</h2>
 
-<br>
-<br>
-
-Attendee Names:
-<ul>
-    {{#each users}}
-    <li>
-        {{attendee_name}}
-    </li>
-    {{/each}}
-</ul>
-
-Interests:
-<ul>
-    {{#each interests}}
-    <li>
-        {{interest}}
-    </li>
-    {{/each}}
-</ul>
+            <ul>
+                {{#each interests}}
+                <li>
+                    {{interest}}
+                </li>
+                {{/each}}
+            </ul>
+        </li>
+    </ul>
+</div>
