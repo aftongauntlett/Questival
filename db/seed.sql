@@ -55,9 +55,9 @@ VALUES ("Video Games", "A fully interactive, electronic simulation of story-tell
 INSERT INTO interest (interest, interest_desc)
 VALUES ("Literature", "Written and spoken word material often sub-grouped by genre which includes techniques such as poetry, drama, fiction, journalism or song." );
 
---SEED DATA FOR JOIN TABLES ADDED 5/16
+-- SEED DATA FOR JOIN TABLES ADDED 5/16
 
---users_interest data
+-- users_interest data
 insert into users_interest (user_id, interest_id) VALUES (1, 6);
 insert into users_interest (user_id, interest_id) VALUES (1, 7);
 insert into users_interest (user_id, interest_id) VALUES (2, 4);
@@ -86,7 +86,7 @@ insert into users_interest (user_id, interest_id) VALUES (10, 5);
 insert into users_interest (user_id, interest_id) VALUES (10, 6);
 insert into users_interest (user_id, interest_id) VALUES (10, 7);
 
---users_events table
+-- users_events table
 insert into users_events (user_id, event_id) VALUES (1, 1);
 insert into users_events (user_id, event_id) VALUES (1, 2);
 insert into users_events (user_id, event_id) VALUES (2, 1);
@@ -105,3 +105,24 @@ insert into users_events (user_id, event_id) VALUES (9, 2);
 insert into users_events (user_id, event_id) VALUES (9, 4);
 insert into users_events (user_id, event_id) VALUES (10, 2);
 insert into users_events (user_id, event_id) VALUES (10, 4);
+
+
+-- interests join table info
+insert into interest_events (interest_id, event_id) VALUES (1, 1);
+insert into interest_events (interest_id, event_id) VALUES (1, 2);
+insert into interest_events (interest_id, event_id) VALUES (2, 1);
+insert into interest_events (interest_id, event_id) VALUES (2, 5);
+insert into interest_events (interest_id, event_id) VALUES (3, 1);
+insert into interest_events (interest_id, event_id) VALUES (3, 3);
+insert into interest_events (interest_id, event_id) VALUES (3, 6);
+insert into interest_events (interest_id, event_id) VALUES (4, 1);
+insert into interest_events (interest_id, event_id) VALUES (5, 2);
+insert into interest_events (interest_id, event_id) VALUES (5, 3);
+insert into interest_events (interest_id, event_id) VALUES (6, 5);
+insert into interest_events (interest_id, event_id) VALUES (7, 3);
+insert into interest_events (interest_id, event_id) VALUES (7, 6);
+insert into interest_events (interest_id, event_id) VALUES (8, 6);
+insert into interest_events (interest_id, event_id) VALUES (9, 2);
+insert into interest_events (interest_id, event_id) VALUES (9, 4);
+insert into interest_events (interest_id, event_id) VALUES (10, 2);
+insert into interest_events (interest_id, event_id) VALUES (10, 4);
