@@ -43,10 +43,15 @@ body {
     background-color: hsl(198, 66%, 31%);
 }
 
-#blurb {
+.blurb {
     text-align: center;
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
+}
+
+.blurbFont {
+        font-family: 'Raleway', sans-serif;
+
 }
 
 .navbar {
@@ -59,12 +64,12 @@ body {
 #listCards {
     background-color: #c2d4dda8;
 }
-/* #listStyle {
+
+a {
+    color: rgb(72, 71, 73);
+}
+
+/* #eventCard {
     text-align: center;
     font-family: 'Raleway', sans-serif;
-} */
-
-/* @media only screen and (max-width: 600px)  {
-  #mainCard 
-  #eventList
 } */

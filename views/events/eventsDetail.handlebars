@@ -1,28 +1,74 @@
-<div class="card" style="width: 18rem;">
-    <div class="card-header">
-        {{event.event_name}}
+<div id="jumbotronMain" class="jumbotron jumbotron-fluid">
+    <div class="container d-flex justify-content-center">
+        <h1 class="display-4">{{event.event_name}}</h1>
     </div>
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item">
-            <h2>Attendee List</h2>
-            <ul>
-                {{#each users}}
-                <li>
-                    {{attendee_name}}
-                </li>
-                {{/each}}
-            </ul>
-        </li>
-        <li class="list-group-item">
-            <h2>Interests List</h2>
+</div>
 
-            <ul>
-                {{#each interests}}
-                <li>
-                    {{interest}}
-                </li>
-                {{/each}}
-            </ul>
-        </li>
-    </ul>
+
+<!-- Button trigger modal -->
+<div class="d-flex justify-content-center">
+    <button type="button" class="btn btn-dark center" data-toggle="modal" data-target="#exampleModalCenter">
+        Info, Dates and Location
+    </button>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">{{event.event_name}}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Description: <br> {{event.event_desc}}</p>
+                <p>Dates: <br> {{event.event_date}}</p>
+                <p>Location: <br> {{event.event_location}}</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="d-flex flex-wrap justify-content-center">
+    <div class="card m-5" style="width: 18rem;">
+        <div class="card-header">
+            <h2>Attendee's</h2>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <ul>
+                    {{#each users}}
+                    <li>
+                        {{attendee_name}}
+                    </li>
+                    {{/each}}
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="card m-5" style="width: 18rem;">
+        <div class="card-header">
+            <h2>Interest's</h2>
+        </div>
+        <ul class="list-group list-group-flush">
+
+            <li class="list-group-item">
+                <ul>
+                    {{#each interests}}
+                    <li>
+                        {{interest}}
+                    </li>
+                    {{/each}}
+                </ul>
+            </li>
+        </ul>
+    </div>
 </div>
