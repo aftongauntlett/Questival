@@ -27,20 +27,4 @@ router.post("/events", function (req, res) {
     })
 })
 
-// export the router at the END  of your file.
 module.exports = router;
-
-
-// connection.connect(function (err) {
-//     if (err) {
-//         console.error("error connecting: " + err.stack);
-//         return;
-//     }
-//     console.log("connected as id " + connection.threadId);
-// });
-// app.get("/events", function (req, res) {
-//     connection.query("SELECT * FROM event;", function (err, data) {
-//         if (err) throw err;
-//         res.render("events", { event: data });
-//     });
-// });
