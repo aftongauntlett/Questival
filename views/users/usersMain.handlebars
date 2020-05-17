@@ -1,16 +1,14 @@
- 
- 
-   
+ <h1>Attendees</h1>
 
-<h2>Attendees</h2>
-
-<ul>
+<div id="usersList" class="d-flex flex-wrap justify-content-center">
   {{#each users}}
-   <li>
-  	   <a href ="/users/{{this.id}}"> {{this.attendee_name}}</a>
-  	</li>
-  {{/each}}
-</ul>
+       <div id="listCards" class="card m-3">
+        <div class="card-body">
+  	   <h2 class="card-title"></h2><a href ="/users/{{this.id}}"> {{this.attendee_name}}</a>
+       </div>
+    </div>
+    {{/each}}
+</div>
 
 
    
