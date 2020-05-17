@@ -5,7 +5,7 @@ module.exports = {
         user: "root",
         //adding process.env so I don't have to show my password in my code
         password: process.env.PASSWORD,
-        database: "burgersDB"
+        database: "questival_db"
     },
     heroku: {
         host: "qn66usrj1lwdk1cc.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
