@@ -3,18 +3,21 @@
 <p><a href="/events/{{id}}">Name: {{this.event_name}}</a></p>
 {{/each}} --}}
 
-
-<div id="interestList" class="d-flex flex-wrap">
-    {{#each interests}}
-    <div class="card m-3">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Interests</h5>
-            <p><a href="/interests/{{id}}">{{this.interest}}</a></p>
+<div class="container">
+    <div id="interestList" class="d-flex flex-wrap">
+        {{#each interests}}
+        <div id="listCards" class="card m-3">
+            <div class="card-body">
+                <h3 class="card-title"><a href="/interests/{{id}}">{{this.interest}}</a></h3>
+            </div>
         </div>
+        {{/each}}
     </div>
-    {{/each}}
 </div>
 
 {{!-- button to create a new event --}}
-<a href="/interests/new">Create a new interest</a>
+<p>
+<div class="container">
+    <a class="btn btn-primary btn-lg" href="/interests/new">Create a new interest</a>
+    </p>
+</div>
