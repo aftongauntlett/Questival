@@ -4,6 +4,13 @@ h1 {
     font-family: 'Raleway', sans-serif;
 }
 
+h2 {
+     text-align: center;
+    padding: 20px;
+    font-family: 'Raleway', sans-serif;
+    color: rgb(59, 58, 59);
+}
+
 h3 {
     text-align: center;
     font-family: 'Raleway', sans-serif;
@@ -49,7 +56,13 @@ body {
     font-size: 20px;
 }
 
-
+#listCards {
+    background-color: #c2d4dda8;
+}
+/* #listStyle {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+} */
 
 /* @media only screen and (max-width: 600px)  {
   #mainCard 

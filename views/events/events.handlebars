@@ -4,17 +4,18 @@
 {{/each}} --}}
 
 
-<div id="eventList" class="d-flex flex-wrap">
+<div id="eventList" class="d-flex flex-wrap justify-content-center">
     {{#each events}}
-    <div class="card m-3">
-        <img class="card-img-top" src="..." alt="Card image cap">
+    <div id="listCards" class="card m-3">
         <div class="card-body">
-            <h5 class="card-title">Events</h5>
-            <p><a href="/events/{{id}}">{{this.event_name}}</a></p>
+            <h2 class="card-title"><a href="/events/{{id}}">{{this.event_name}}</h2>
         </div>
     </div>
     {{/each}}
 </div>
 
 {{!-- button to create a new event --}}
-<a href="/events/new">Create a new event</a>
+<div class="d-flex justify-content-center pt-5">
+    <a href="/events/new" class="btn btn-dark btn-lg dark p-4" role="button" aria-pressed="true">Create a
+        new Event!</a>
+</div>
