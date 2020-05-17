@@ -16,6 +16,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
 </head>
 
+{{!-- adding a nav bar that links to the 3 main pages --}}
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="/">Home</a>
@@ -40,7 +42,21 @@
         </div>
     </nav>
 
-    <h1>Welcome to Questival!</h1>
+    {{!-- using jumbotron for styling --}}
+    <div id="jumbotronMain" class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Welcome to Questival!</h1>
+            <div id="blurb">
+                <p>Questival is designed to connect fellow attendees with conventions, festivals and
+                    events that are tailored to their own personal interests. Create an account, add your interests and
+                    view
+                    events that align with what YOU care about. You will also be able to see other attendees that are
+                    going
+                    to those same events that share your interests! Plan a meetup, make a friend!</p>
+            </div>
+        </div>
+    </div>
+
     {{{ body }}}
 
     {{!-- boilerplate for Bootstrap cont.--}}

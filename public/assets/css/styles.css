@@ -1,8 +1,57 @@
 h1 {
     text-align: center;
     padding: 20px;
+    font-family: 'Raleway', sans-serif;
 }
 
 h3 {
     text-align: center;
+    font-family: 'Raleway', sans-serif;
 }
+
+h5 {
+    font-size: 35px;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+#mainCard {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    margin: 40px;
+    width:  600px
+}
+
+#jumbotronMain {
+    margin-top: 30px;
+    background-color: #c2d4ddde;
+}
+
+body {
+    background-image: url(https://wallpaperplay.com/walls/full/b/2/f/95056.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: hsl(198, 66%, 31%);
+}
+
+#blurb {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+}
+
+.navbar {
+    padding: 10px;
+    padding-left: 40px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+
+
+
+/* @media only screen and (max-width: 600px)  {
+  #mainCard 
+  #eventList
+} */
