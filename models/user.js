@@ -1,31 +1,30 @@
-// // CRUD (Create, Read, Update, Delete) Methods
-// var orm = require("../config/orm.js")
+const connection = require("../config/connection");
 
-// Create a method to return the users events 
-// Create another method to return the users interestsvar orm = require('../config/orm.js')
+const user = {
+    all(callback) {
+        connection.query("SELECT * FROM user", (err, users) => {
+            if (err) throw err;
+            callback(users)
+        })
+    },
 
-// var attendee = {
-//   selectAll: function (cb) {
-//     orm.selectAll('user', function (res) {
-//       cb(res)
-//     })
-//   },
-//   // The variables cols and vals are arrays.
-//   create: function (cols, vals, cb) {
-//     orm.create('user', cols, vals, function (res) {
-//       cb(res)
-//     })
-//   },
-//   update: function (objColVals, condition, cb) {
-//     orm.update('user', objColVals, condition, function (res) {
-//       cb(res)
-//     })
-//   },
-//   delete: function (condition, cb) {
-//     orm.delete('user', condition, function (res) {
-//       cb(res)
-//     })
-//   }
-// }
+    getEventsUsersAndInterests(id, callback) {
+        let query = "SELECT * FROM user WHERE id = " + id;
+   //     let userQuery = "SELECT * FROM user INNER JOIN users_events ON user.id = users_events.user_id where users_events.user_id = " + id;
+        let eventQuery = "SELECT * FROM event INNER JOIN users_events ON event.id = users_events.event_id where users_events.user_id = " + id;
+        let interestQuery = "SELECT * FROM interest INNER JOIN users_interest ON interest.id = users_interest.interest_id where users_interest.user_id = " + id;
 
-// module.exports = attendee
+        connection.query(query, (err, res) => {
+            if (err) throw err;
+            connection.query(eventQuery, (err, events) => {
+                if (err) throw err;
+                connection.query(interestQuery, (err, interests) => {
+                    if (err) throw err;
+                    callback(res, events, interests);
+                })
+            })
+        })
+    }
+
+}
+module.exports = user;
