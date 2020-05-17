@@ -18,8 +18,6 @@ const event = {
             event_location,
             event_date,
         }, function (err, resp) {
-            console.log('err', err);
-            console.log('resp', resp)
             if (err) throw err;
             callback(resp)
         })
