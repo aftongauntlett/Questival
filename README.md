@@ -25,7 +25,6 @@ The user is able to:
 * Ability to add events and interests to a specific attendee.
 
 
-
 ## The Tech
 * HTML/CSS
 * Bootstrap
