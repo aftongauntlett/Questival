@@ -8,13 +8,13 @@
 
         <div id="user">
             <div style="width: 100%; margin: 25px auto;">
-                <h2 style="color: white">Select Events to Attend: </h2>
+                <h2 style="color: rgb(58, 57, 57); background-color: rgb(119, 159, 167); border-radius: 12px;">Select Events to Attend: </h2>
                 {{#each events}}
                 <div id="listCards" class="card m-3"></div>
                 <div class="card-body">
                     <div class="form-group">
                         <form action="/user/{{../user.id}}/event/{{this.id}}" method="POST">
-                            <button class="btn btn-lg btn-success btn-block" type="submit">{{this.event_name}}</button>
+                            <button class="btn btn-lg btn-dark btn-block" type="submit">{{this.event_name}}</button>
                     </div>
                     </form>
                 </div>
@@ -25,13 +25,13 @@
 
 
         <div style="width: 50%; margin: 25px auto;">
-            <h2 style="color: white">Select interests you identify with: </h2>
+            <h2 style="color: rgb(58, 57, 57); background-color: rgb(119, 159, 167); border-radius: 12px;">Select interests you identify with: </h2>
             {{#each interests}}
             <div id="listCards" class="card m-3"></div>
             <div class="card-body">
                 <div class="form-group">
                     <form action="/user/{{../user.id}}/interest/{{this.id}}" method="POST">
-                        <button class="btn btn-lg btn-success btn-block" type="submit">{{this.interest}}</button>
+                        <button class="btn btn-lg btn-dark btn-block" type="submit">{{this.interest}}</button>
                 </div>
                 </form>
             </div>
