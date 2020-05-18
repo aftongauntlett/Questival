@@ -23,10 +23,16 @@ router.get("/user/new", function (req, res) {
 })
 
 router.post("/user", function (req, res) {
-    user.create(req.body.name, function (resp) {
-        res.redirect("/users")
-    })
-})
+    if (req.body.name ==="") {
+        res.render("users/newUser");
+    } else {
+    user.create(req.body.name, function (resp) {    
+            res.redirect("/users")
+   
+        })
+    }
+  }) 
+
 
 router.get("/users/edit/:id", function (req, res) {
     user.get(req.params.id, (users) => {

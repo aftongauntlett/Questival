@@ -22,9 +22,13 @@ router.get("/events/:id", function (req, res) {
 })
 
 router.post("/events", function (req, res) {
+    if (req.body.event_name ==="") {
+        res.render("events/newEvent");
+    } else { 
     event.create(req.body.event_name, req.body.event_desc, req.body.event_location, req.body.event_date, function (resp) {
         res.redirect("/events")
     })
+}
 })
 
 module.exports = router;
