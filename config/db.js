@@ -1,3 +1,5 @@
+// include heroku or local db options
+
 module.exports = {
     db: {
         host: "localhost",
