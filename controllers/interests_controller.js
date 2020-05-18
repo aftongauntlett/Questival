@@ -22,9 +22,13 @@ router.get("/interests/:id", function (req, res) {
 })
 
 router.post("/interests", function (req, res) {
+    if (req.body.interest ==="") {
+        res.render("interests/newInterest");
+    } else { 
     interest.create(req.body.interest, req.body.interest_desc, function (resp) {
         res.redirect("/interests")
     })
+}
 })
 
 // export the router at the END  of your file.
