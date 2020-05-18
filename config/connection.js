@@ -2,16 +2,10 @@
 
 // Boiler Plate Connection copied from activity files
 var mysql = require("mysql");
+const config = require("./db");
 
-const connection = mysql.createConnection({
-    host: "localhost",
-    port: 3306,
-    user: "root",
-    
-    //adding process.env (accessing the environment variable password) so I don't have to show my password in code ("PASSWORD= ___ node server.js")
-    password: process.env.PASSWORD,
-    database: "questival_DB"
-});
+
+const connection = mysql.createConnection(process.env === 'production' ? config.heroku : config.db);
 
 
 // Export the connection.
