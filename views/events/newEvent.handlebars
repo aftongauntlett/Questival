@@ -1,42 +1,40 @@
 <div class="banner" class="page-header">
-    <h1>Interests</h1>
+    <h1>Add a new Event!</h1>
 </div>
 
 <div class="container">
     <div class="row">
 
         <div style="width: 30%; margin: 25px auto;">
-            <h3> Add a new event!</h3>
+    
             <form action="/events" method="POST">
                 {{!-- Form to add a new event - this can be used for users and interests as well --}}
 
                 <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Name of Event:</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                        name="event_name"></textarea>
+                        name="event_name" placeholder="Name of Event"></textarea>
                 </div>
 
                 <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Briefly describe the event:</label>
+
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                        name="event_desc"></textarea>
+                        name="event_desc" placeholder="Briefly describe the Event"></textarea>
                 </div>
 
                 <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Location (hotel, city, state):</label>
+  
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                        name="event_location"></textarea>
+                        name="event_location" placeholder="Location (hotel, city, state)"></textarea>
                 </div>
 
                 <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Dates:</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                        name="event_date"></textarea>
+                        name="event_date" placeholder="Dates"></textarea>
                 </div>
 
                 <div class="form-group">
                     {{!-- Button to submit the info, the burger HW uses this process, too. --}}
-                    <button class="btn btn-lg btn-dark btn-block" id="newButton" type="submit">Submit</button>
+                    <button class="btn btn-lg btn-success btn-block" id="newButton" type="submit">Submit</button>
                 </div>
             </form>
 
