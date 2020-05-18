@@ -7,12 +7,12 @@ const connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root",
-
+    
     //adding process.env (accessing the environment variable password) so I don't have to show my password in code ("PASSWORD= ___ node server.js")
     password: "AuraZaira77",
-    database: "questival_db"
+    database: "questival_DB"
 });
 
 
 // Export the connection.
-module.exports = connection;
+module.exports = connection; 

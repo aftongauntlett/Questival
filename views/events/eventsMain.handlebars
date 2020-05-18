@@ -1,0 +1,11 @@
+<h1>Event List Page</h1>
+<div class="d-flex flex-wrap justify-content-center">
+    {{#each events}}
+    <div>
+        <p><a href="/events/{{id}}">Name: {{this.event_name}}</a></p>
+        <p><a href="/events/{{id}}">Description: {{this.event_desc}}</a></p>
+        <p><a href="/events/{{id}}">Location: {{this.event_location}}</a></p>
+        <p><a href="/events/{{id}}">Dates: {{this.event_date}}</a></p>
+    </div>
+    {{/each}}
+</div>

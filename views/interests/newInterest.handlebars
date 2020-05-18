@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+
+        <div style="width: 30%; margin: 25px auto;">
+            <h3> Add a new interest!</h3>
+            <form action="/interests" method="POST">
+
+
+                {{!-- Form to add a new event - this can be used for users and interests as well --}}
+
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Enter the name of the interest:</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="interest"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Briefly describe the interest:</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                        name="interest_desc"></textarea>
+                </div>
+
+
+                {{!-- Button to submit the info, the burger HW uses this process, too. --}}
+                <button class="btn btn-lg btn-dark btn-block" id="newButton" type="submit">Submit</button>
+
+            </form>
+
+        </div>
+    </div>
+</div>

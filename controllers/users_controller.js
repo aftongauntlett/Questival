@@ -1,88 +1,49 @@
-// Import Express
 const express = require("express");
 const router = express.Router();
-const connection = require("../config/connection");
-var attendee = require("../models/user.js");
+const user = require("../models/user")
+const interest = require("../models/interest.js")
+const event = require("../models/event.js")
 
-router.get('/views/userdetail/:id', function(req, res) {
-  var id = req.params.id;
-  
-  event.selectEvent(id, function(data) {
-  
-    var hbsObject = {
-      allEvent: data
-      };
-     
-    res.render("userdetail", hbsObject);
-  });
-});
+router.get("/users", function (req, res) {
+    user.all(result => {
+        res.render("users/usersMain", { users: result })
+    })
+})
 
 
-router.get("/", function(req, res) {
-  attendee.selectAll(function(data) {
 
-    var hbsObject = {
-      alluser: data
-    };
-    res.render("index", hbsObject);
-  });
-});
+router.get("/users/:id", function (req, res) {
+    user.getEventsUsersAndInterests(req.params.id, (result, events, interests) => {
+        console.log(JSON.stringify(result))
+        console.log(interests)
+        res.render("users/usersDetail", { user: result[0], events, interests })
+    })
+})
 
-router.get("/views/users", function(req, res) {
-  attendee.selectAll(function(data) {
+router.get("/user/new", function (req, res) {
+    res.render("users/newUser", {})
+})
 
-    var hbsObject = {
-      alluser: data
-    };
-    res.render("users", hbsObject);
-  });
-});
-  router.post("/api/user", function(req, res) {
-    
-    connection.query("INSERT INTO user (attendee_name) VALUES (?)", [req.body.attendee_name], function(err, result) {
-      if (err) {
-        return res.status(500).end();
-      }
-  
-      // Send back the ID of the new plan
-      res.json({ id: result.insertId });
-      console.log({ id: result.insertId });
-    });
-  });
+router.post("/user", function (req, res) {
+    user.create(req.body.name, function (resp) {
+        res.redirect("/users")
+    })
+})
 
- 
-  // Update a attendee name
-  router.put("/api/user/:id", function(req, res) {
-    connection.query("UPDATE plans SET plan = ? WHERE id = ?", [req.body.attendee_name, req.params.id], function(err, result) {
-      if (err) {
-        // If an error occurred, send a generic server failure
-        return res.status(500).end();
-      }
-      else if (result.changedRows === 0) {
-        // If no rows were changed, then the ID must not exist, so 404
-        return res.status(404).end();
-      }
-      res.status(200).end();
-  
-    });
-  });
-  
-  // Delete a plan
-  router.delete("/api/user/:id", function(req, res) {
-    connection.query("DELETE FROM user WHERE id = ?", [req.params.id], function(err, result) {
-      if (err) {
-        // If an error occurred, send a generic server failure
-        return res.status(500).end();
-      }
-      else if (result.affectedRows === 0) {
-        // If no rows were changed, then the ID must not exist, so 404
-        return res.status(404).end();
-      }
-      res.status(200).end();
-  
-    });
-  });
-// export the router at the end of your file.
+router.get("/users/edit/:id", function (req, res) {
+    user.get(req.params.id, (users) => {
+        interest.all(interests => {
+            event.all(events => {
+                res.render("users/userEdit", { user: users[0], interests, events })
+            })
+        })
+    })
+})
 
+router.post("/user/:id/interest/:interest_id", function (req, res) {
+    user.addInterest(req.params.id, req.params.interest_id, function (resp) {
+        res.redirect("/users/" + req.params.id)
+    })
+})
 
 module.exports = router;

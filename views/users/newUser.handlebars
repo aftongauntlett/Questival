@@ -1,0 +1,49 @@
+{{!-- Form to add a new event - this can be used for users and interests as well --}}
+<div class="container">
+    <div class="row">
+
+        <div style="width: 30%; margin: 25px auto;">
+            <h3> Add a new User!</h3>
+            <form action="/user" method="POST">
+                <div class="form-group">
+                    <label for="user-name">First and Last Name:</label>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" id="user-name" rows="3" name="name"></textarea>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-dark btn-block" id="newButton" type="submit">Submit</button>
+                </div>
+        </div>
+    </div>
+</div>
+</div>
+</form>
+
+
+    {{!-- <div class="form-group">
+        <label for="interests">Select Interests:</label>
+        <select multiple class="form-control" id="interests" name="interests">
+            {{#each interests}}
+            <option>
+                {{interest}}
+            </option>
+            {{/each}}
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="events">Select Events Attending:</label>
+        <select multiple class="form-control" id="events" name="events">
+            {{#each events}}
+            <option>
+                {{event_name}}
+            </option>
+            {{/each}}
+        </select>
+    </div> --}}
+
+
+    {{!-- Button to submit the info, the burger HW uses this process, too. --}}
+
+

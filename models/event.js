@@ -1,22 +1,48 @@
-// CRUD (Create, Read, Update, Delete) Methods
+// import connection.js 
+const connection = require("../config/connection");
 
-// Return all users attending this (selected) event.
+// create the methods that will execute the necessary MySQL commands in the controllers. These are the methods you will need to use in order to retrieve and store data in your database.
+const event = {
 
-// This is made to talk to the database (this is sometimes entered in the server.js file, but for sanity sake we are creating the "models" folder to store this data.)
+    all(callback) {
+        connection.query("SELECT * FROM event", (err, events) => {
+            if (err) throw err;
+            callback(events)
+        })
+    },
 
-var orm = require('../config/orm.js');
+    create(event_name, event_desc, event_location, event_date, callback) {
+        connection.query("INSERT INTO event SET ?", {
+            event_name,
+            event_desc,
+            event_location,
+            event_date,
+        }, function (err, resp) {
+            if (err) throw err;
+            callback(resp)
+        })
+    },
 
-// Return all users attending this (selected) event.
-var event = {
-    selectEvent: function(id, cb) {
-      orm.selectEvent("event", id, function(res) {
-      cb(res);
-      });
+    // pulling from the join tables here, connecting info from the user and interests tables to the events description page.
+    getWithUsersAndInterests(id, callback) {
+        let query = "SELECT * FROM event WHERE id = " + id;
+        let userQuery = "SELECT * FROM user INNER JOIN users_events ON user.id = users_events.user_id where users_events.event_id = " + id;
+        let interestQuery = "SELECT * FROM interest INNER JOIN interest_events ON interest.id = interest_events.interest_id where interest_events.event_id = " + id;
+
+        connection.query(query, (err, res) => {
+            if (err) throw err;
+            connection.query(userQuery, (err, users) => {
+                if (err) throw err;
+                connection.query(interestQuery, (err, interests) => {
+                    if (err) throw err;
+                    callback(res, users, interests);
+                })
+            })
+        })
     }
-};
-  
+}
+
+// Export at the END of the .js file.
 module.exports = event;
-  
 
 
-// connection.query("SELECT * FROM tasks;" = example of what code will be inside of these files

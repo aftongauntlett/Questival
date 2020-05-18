@@ -1,3 +1,5 @@
+USE questival_db;
+
 INSERT INTO user (attendee_name)
 VALUES ("Jane Jamout");
 INSERT INTO user (attendee_name)
@@ -54,3 +56,75 @@ INSERT INTO interest (interest, interest_desc)
 VALUES ("Video Games", "A fully interactive, electronic simulation of story-telling, action and adventure, quest, competition or puzzle solving (or a combination of all these things) incremented on by inputs and outputs." );
 INSERT INTO interest (interest, interest_desc)
 VALUES ("Literature", "Written and spoken word material often sub-grouped by genre which includes techniques such as poetry, drama, fiction, journalism or song." );
+
+-- SEED DATA FOR JOIN TABLES ADDED 5/16
+
+-- users_interest data
+insert into users_interest (user_id, interest_id) VALUES (1, 6);
+insert into users_interest (user_id, interest_id) VALUES (1, 7);
+insert into users_interest (user_id, interest_id) VALUES (2, 4);
+insert into users_interest (user_id, interest_id) VALUES (2, 10);
+insert into users_interest (user_id, interest_id) VALUES (3, 2);
+insert into users_interest (user_id, interest_id) VALUES (3, 9);
+insert into users_interest (user_id, interest_id) VALUES (3, 11);
+insert into users_interest (user_id, interest_id) VALUES (4, 5);
+insert into users_interest (user_id, interest_id) VALUES (4, 6);
+insert into users_interest (user_id, interest_id) VALUES (4, 7);
+insert into users_interest (user_id, interest_id) VALUES (5, 1);
+insert into users_interest (user_id, interest_id) VALUES (5, 2);
+insert into users_interest (user_id, interest_id) VALUES (6, 3);
+insert into users_interest (user_id, interest_id) VALUES (6, 4);
+insert into users_interest (user_id, interest_id) VALUES (6, 10);
+insert into users_interest (user_id, interest_id) VALUES (7, 1);
+insert into users_interest (user_id, interest_id) VALUES (7, 11);
+insert into users_interest (user_id, interest_id) VALUES (8, 1);
+insert into users_interest (user_id, interest_id) VALUES (8, 5);
+insert into users_interest (user_id, interest_id) VALUES (8, 11);
+insert into users_interest (user_id, interest_id) VALUES (9, 1);
+insert into users_interest (user_id, interest_id) VALUES (9, 5);
+insert into users_interest (user_id, interest_id) VALUES (9, 6);
+insert into users_interest (user_id, interest_id) VALUES (10, 1);
+insert into users_interest (user_id, interest_id) VALUES (10, 5);
+insert into users_interest (user_id, interest_id) VALUES (10, 6);
+insert into users_interest (user_id, interest_id) VALUES (10, 7);
+
+-- users_events table
+insert into users_events (user_id, event_id) VALUES (1, 1);
+insert into users_events (user_id, event_id) VALUES (1, 2);
+insert into users_events (user_id, event_id) VALUES (2, 1);
+insert into users_events (user_id, event_id) VALUES (2, 5);
+insert into users_events (user_id, event_id) VALUES (3, 1);
+insert into users_events (user_id, event_id) VALUES (3, 3);
+insert into users_events (user_id, event_id) VALUES (3, 6);
+insert into users_events (user_id, event_id) VALUES (4, 1);
+insert into users_events (user_id, event_id) VALUES (5, 2);
+insert into users_events (user_id, event_id) VALUES (5, 3);
+insert into users_events (user_id, event_id) VALUES (6, 5);
+insert into users_events (user_id, event_id) VALUES (7, 3);
+insert into users_events (user_id, event_id) VALUES (7, 6);
+insert into users_events (user_id, event_id) VALUES (8, 6);
+insert into users_events (user_id, event_id) VALUES (9, 2);
+insert into users_events (user_id, event_id) VALUES (9, 4);
+insert into users_events (user_id, event_id) VALUES (10, 2);
+insert into users_events (user_id, event_id) VALUES (10, 4);
+
+
+-- interests join table info
+insert into interest_events (interest_id, event_id) VALUES (1, 1);
+insert into interest_events (interest_id, event_id) VALUES (1, 2);
+insert into interest_events (interest_id, event_id) VALUES (2, 1);
+insert into interest_events (interest_id, event_id) VALUES (2, 5);
+insert into interest_events (interest_id, event_id) VALUES (3, 1);
+insert into interest_events (interest_id, event_id) VALUES (3, 3);
+insert into interest_events (interest_id, event_id) VALUES (3, 6);
+insert into interest_events (interest_id, event_id) VALUES (4, 1);
+insert into interest_events (interest_id, event_id) VALUES (5, 2);
+insert into interest_events (interest_id, event_id) VALUES (5, 3);
+insert into interest_events (interest_id, event_id) VALUES (6, 5);
+insert into interest_events (interest_id, event_id) VALUES (7, 3);
+insert into interest_events (interest_id, event_id) VALUES (7, 6);
+insert into interest_events (interest_id, event_id) VALUES (8, 6);
+insert into interest_events (interest_id, event_id) VALUES (9, 2);
+insert into interest_events (interest_id, event_id) VALUES (9, 4);
+insert into interest_events (interest_id, event_id) VALUES (10, 2);
+insert into interest_events (interest_id, event_id) VALUES (10, 4);

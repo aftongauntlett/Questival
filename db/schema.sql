@@ -1,4 +1,3 @@
-
 DROP DATABASE IF EXISTS questival_db;
 
 -- Create the database for QUESTival
@@ -22,3 +21,35 @@ CREATE TABLE event (
   PRIMARY KEY (id)
 );
 
+
+-- Create interest table.
+CREATE TABLE interest (
+  id int NOT NULL AUTO_INCREMENT,
+  interest varchar(255) NOT NULL,
+  interest_desc varchar(255) NOT NULL,
+  PRIMARY KEY (id)
+);
+
+-- JOIN TABLES ADDED 5/16
+
+CREATE TABLE users_interest (
+  id int NOT NULL AUTO_INCREMENT,
+  user_id int,
+  interest_id int,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE users_events (
+  id int NOT NULL AUTO_INCREMENT,
+  user_id int,
+  event_id int,
+  PRIMARY KEY (id)
+);
+
+-- adding an interest_events join table 
+CREATE TABLE interest_events (
+  id int NOT NULL AUTO_INCREMENT,
+  interest_id int,
+  event_id int,
+  PRIMARY KEY (id)
+);

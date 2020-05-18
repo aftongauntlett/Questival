@@ -3,9 +3,9 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
 const app = express();
-//const eventRoutes = require("./controllers/events_controller.js");
-const routes = require("./controllers/users_controller.js");
-//const interestRoutes = require("./controllers/interests_controller.js");
+const eventRoutes = require("./controllers/events_controller.js");
+const userRoutes = require("./controllers/users_controller.js");
+const interestRoutes = require("./controllers/interests_controller.js");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -18,12 +18,14 @@ var PORT = process.env.PORT || 8080;
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-//app.use(eventRoutes);
-app.use(routes);
-//app.use(interestRoutes);
+app.use(eventRoutes);
+app.use(userRoutes);
+app.use(interestRoutes);
 
 
-
+app.get("/", function (req, res) {
+    res.render("index")
+})
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function () {

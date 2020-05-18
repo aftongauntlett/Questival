@@ -1,0 +1,21 @@
+<h1>Event List Page</h1>
+{{!-- {{#each events}}
+<p><a href="/events/{{id}}">Name: {{this.event_name}}</a></p>
+{{/each}} --}}
+
+
+<div id="eventList" class="d-flex flex-wrap justify-content-center">
+    {{#each events}}
+    <div id="listCards" class="card m-3">
+        <div class="card-body">
+            <h2 class="card-title"><a href="/events/{{id}}">{{this.event_name}}</h2>
+        </div>
+    </div>
+    {{/each}}
+</div>
+
+{{!-- button to create a new event --}}
+<div class="d-flex justify-content-center pt-5">
+    <a href="/events/new" class="btn btn-dark btn-lg dark p-4" role="button" aria-pressed="true">Create a
+        new Event!</a>
+</div>
