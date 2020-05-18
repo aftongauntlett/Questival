@@ -7,6 +7,7 @@ module.exports = {
         password: process.env.PASSWORD,
         database: "questival_db"
     },
+
     heroku: {
         host: "us-cdbr-east-06.cleardb.net",
         port: 3306,
