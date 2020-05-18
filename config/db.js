@@ -6,7 +6,7 @@ module.exports = {
         port: 3306,
         user: "root",
         //adding process.env so I don't have to show my password in my code
-        password: "AuraZaira77",
+        password: process.env.DB_PASSWORD,
         database: "questival_db"
     },
 
