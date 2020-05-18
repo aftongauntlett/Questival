@@ -1,35 +1,29 @@
-<div class="col-12 justify-content-center">
+<div class="d-flex justify-content-center p-5">
+  <div class="card" style="text-align:left">
+    {{!-- <img src="..." class="card-img-top" alt="..."> --}}
+    <h5 class="card-header" style="text-align:center">{{user.attendee_name}}</h5>
+    <div class=" card-body">
 
-
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <h2>{{user.attendee_name}}</h2>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <h5>Attending Events: </h5>
-    <div id="user">
+      <h5>Events Attending:</h5>
       <ul>
         {{#each events}}
         <li>
-          {{this.event_name}}{{this.event_location}}
+          {{this.event_name}}
         </li>
         {{/each}}
       </ul>
+
+      <h5>Interests:</h5>
+      <ul>
+        {{#each interests}}
+        <li>
+          {{this.interest}}
+        </li>
+        {{/each}}
+      </ul>
+
     </div>
-    <h5>Interested in: </h5>
-    <ul>
-      {{#each interests}}
-      <li>
-        {{this.interest}}
-      </li>
-      {{/each}}
-    </ul>
   </div>
-</div>
-</div>
 </div>
 
 

@@ -3,30 +3,30 @@
     <div class="row">
       <div class="col-lg-12">
 
-<h2>{{interest.interest}}</h2>
-<h6>{{interest_desc.interest_desc}}</h6>
+        <h2>{{interest.interest}}</h2>
+        <h6>{{interest_desc.interest_desc}}</h6>
 
- </div>
+      </div>
     </div>
   </div>
   <div class="container">
-<h5>Attendee who share this interest:</h5>
-<div id="user">
+    <h5>Attendees who share this interest:</h5>
+    <div id="user">
       <ul>
-    {{#each users}}
-    <li>
-        {{attendee_name}}
-    </li>
-    {{/each}}
-</ul>
+        {{#each users}}
+        <li>
+          {{attendee_name}}
+        </li>
+        {{/each}}
+      </ul>
     </div>
-<h5>Events with activities related to this interest:</h5>
-<ul>
-    {{#each events}}
-    <li>
+    <h5>Events with activities related to this interest:</h5>
+    <ul>
+      {{#each events}}
+      <li>
         {{event_name}}
-    </li>
-   {{/each}}
+      </li>
+      {{/each}}
     </ul>
   </div>
 </div>
