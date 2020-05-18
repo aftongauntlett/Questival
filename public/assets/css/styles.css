@@ -79,14 +79,17 @@ a {
 }
 
 #attendeeName {
-    background-color: hsla(276, 15%, 67%, 0.438);
+    background-color: hsla(275, 9%, 74%, 0.774);
     color: black;
     font-family: 'Raleway', sans-serif;
+    font-size: 45px;
     margin: 10px;
 }
 
-#banner {
+.banner {
     background-color: rgba(194, 194, 194, 0.787);
     margin: 10px;
     margin-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+
 }

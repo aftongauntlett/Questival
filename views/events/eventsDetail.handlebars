@@ -1,14 +1,17 @@
-<div id="jumbotronMain" class="jumbotron jumbotron-fluid">
-    <div class="container d-flex justify-content-center">
-        <h1 class="display-4">{{event.event_name}}</h1>
+<div class="banner" class="page-header">
+    <h1>{{event.event_name}}</h1>
+    <div class="banner" style="text-align:center;">
+
+        <br>
+        <p style="font-weight:bold">Description:</p>
+        <p>{{event.event_desc}}</p>
+        <p style="font-weight:bold">Dates:</p>
+        <p>{{event.event_date}}</p>
+        <p style="font-weight:bold">Location:</p>
+        <p>{{event.event_location}}</p>
+        <br>
     </div>
 </div>
-
-{{event.event_name}}
-<p>Description: <br> {{event.event_desc}}</p>
-<p>Dates: <br> {{event.event_date}}</p>
-<p>Location: <br> {{event.event_location}}</p>
-
 
 <div class="d-flex flex-wrap justify-content-center">
     <div class="card m-5" style="width: 18rem;">
