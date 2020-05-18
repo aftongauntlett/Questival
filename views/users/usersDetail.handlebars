@@ -1,33 +1,44 @@
-<div class="d-flex justify-content-center p-5">
-  <div class="card" style="text-align:left">
-    {{!-- <img src="..." class="card-img-top" alt="..."> --}}
-    <h5 class="card-header" style="text-align:center">{{user.attendee_name}}</h5>
-    <div class=" card-body">
+<h2 id="attendeeName">{{user.attendee_name}}</h2>
 
-      <h5>Events Attending:</h5>
-      <ul>
-        {{#each events}}
-        <li>
-          {{this.event_name}}
-        </li>
-        {{/each}}
-      </ul>
 
-      <h5>Interests:</h5>
-      <ul>
-        {{#each interests}}
-        <li>
-          {{this.interest}}
-        </li>
-        {{/each}}
-      </ul>
-
+<div class="d-flex flex-wrap justify-content-center">
+  <div id="detailCard" class="card m-5" style="width: 18rem;">
+    <div class="card-header">
+      <h2>Event's Attending</h2>
     </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <ul>
+          {{#each events}}
+          <li>
+            {{this.event_name}}
+          </li>
+          {{/each}}
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div id="detailCard" class="card m-5" style="width: 18rem;">
+    <div class="card-header">
+      <h2>Interested in:</h2>
+    </div>
+    <ul class="list-group list-group-flush">
+
+      <li class="list-group-item">
+        <ul>
+          {{#each interests}}
+          <li>
+            {{this.interest}}
+          </li>
+          {{/each}}
+        </ul>
+      </li>
+    </ul>
   </div>
 </div>
 
-
 <div class="d-flex justify-content-center pt-5">
-  <a href="/users/edit/{{user.id}}" class="btn btn-dark btn-lg dark p-4" role="button" aria-pressed="true">Edit
+  <a href="/users/edit/{{user.id}}" class="btn btn-light btn-lg light p-4" role="button" aria-pressed="true">Edit
     Attendee</a>
 </div>
