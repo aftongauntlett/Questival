@@ -15,7 +15,15 @@ https://questival.herokuapp.com/
 
 ## Description
 
-Questival is designed to connect fellow attendees with conventions, festivals and events that are tailored to their own personal interests. Create an account, add your interests and view events that align with what YOU care about. You will also be able to see other attendees that are going to those same events that share your interests! Plan a meetup, make a friend!
+So what IS Questival? Questival is a webapp designed to connect fellow attendees with events that are tailored to their own personal interests and allow them to see other attendees with those same shared interests/events.
+
+The user is able to:
+
+* View a list of all Attendees, Interests and Events.
+* View Individual Attendees, Interest and Events - including details and how they connect with each other.
+* Ability to add New Attendees, Interests and Events.
+* Ability to add events and interests to a specific attendee.
+
 
 ## The Tech
 * HTML/CSS
@@ -31,7 +39,7 @@ Questival is designed to connect fellow attendees with conventions, festivals an
 ## New Tech Used:
 * Jira (for some members of the team)
 * Heroku
-* ClearDB
+* CleanDB
 * Join Tables
 
 # Installation to Run Locally:
