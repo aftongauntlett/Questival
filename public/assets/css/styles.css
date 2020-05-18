@@ -23,6 +23,10 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
+#detailCard{
+    opacity: 90%;
+}
+
 #mainCard {
     text-align: center;
     font-family: 'Raleway', sans-serif;
@@ -51,7 +55,10 @@ body {
 
 .blurbFont {
         font-family: 'Raleway', sans-serif;
+}
 
+#buttons {
+    opacity: 80%;
 }
 
 .navbar {
@@ -62,14 +69,33 @@ body {
 }
 
 #listCards {
-    background-color: #c2d4dda8;
+    background-color: #c2d4ddd5;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
 }
 
 a {
     color: rgb(61, 61, 61);
 }
 
-/* #eventCard {
-    text-align: center;
+#attendeeName {
+    background-color: hsla(275, 9%, 74%, 0.774);
+    color: black;
     font-family: 'Raleway', sans-serif;
-} */
+    font-size: 45px;
+    margin: 10px;
+}
+
+.banner {
+    background-color: rgba(194, 194, 194, 0.787);
+    margin: 10px;
+    margin-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+#banner {
+    background-color: rgba(194, 194, 194, 0.787);
+    margin: 10px;
+    margin-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+}

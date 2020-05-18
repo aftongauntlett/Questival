@@ -1,23 +1,20 @@
-<h1>Interest List Page</h1>
-{{!-- {{#each events}}
-<p><a href="/events/{{id}}">Name: {{this.event_name}}</a></p>
-{{/each}} --}}
+<div id="banner" class="page-header">
+    <h1>Interests!</h1>
+</div>
 
 <div class="container">
     <div id="interestList" class="d-flex flex-wrap">
         {{#each interests}}
         <div id="listCards" class="card m-3">
             <div class="card-body">
-                <h3 class="card-title"><a href="/interests/{{id}}">{{this.interest}}</a></h3>
+                <a href="/interests/{{id}}">{{this.interest}}</a>
             </div>
         </div>
         {{/each}}
     </div>
 </div>
 
-{{!-- button to create a new event --}}
-<p>
-<div class="container text-center">
-    <a class="btn btn-dark btn-lg dark p-4" href="/interests/new">Create a new interest</a>
-    </p>
+<div id="buttons" class="d-flex justify-content-center pt-5">
+    <a href="/interests/new" class="btn btn-success btn-lg success p-4" role="button" aria-pressed="true">Create a new
+        interest!</a>
 </div>

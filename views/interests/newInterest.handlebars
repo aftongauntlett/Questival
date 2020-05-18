@@ -1,30 +1,26 @@
+<div class="banner" class="page-header">
+    <h1>Add a New Interest</h1>
+</div>
+
+
 <div class="container">
     <div class="row">
 
         <div style="width: 30%; margin: 25px auto;">
-            <h3> Add a new interest!</h3>
             <form action="/interests" method="POST">
-
-
-                {{!-- Form to add a new event - this can be used for users and interests as well --}}
-
                 <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Enter the name of the interest:</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="interest"></textarea>
+                    <textarea class="form-control" id="interest" rows="3" name="interest"
+                        placeholder="Enter the name of the interest here"></textarea>
                 </div>
-
                 <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Briefly describe the interest:</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                        name="interest_desc"></textarea>
+                    <textarea class="form-control" id="interest_desc" rows="3" name="interest_desc"
+                        placeholder="Describe the interest"></textarea>
                 </div>
-
-
-                {{!-- Button to submit the info, the burger HW uses this process, too. --}}
-                <button class="btn btn-lg btn-dark btn-block" id="newButton" type="submit">Submit</button>
-
+                <div class="form-group">
+                    <button class="btn btn-lg btn-success btn-block" id="newButton" type="submit">Submit</button>
+                </div>
             </form>
-
         </div>
     </div>
+</div>
 </div>

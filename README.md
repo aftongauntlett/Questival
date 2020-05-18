@@ -5,10 +5,13 @@
 
 **Jira:** [Manage Group Tasks](https://kmtc.atlassian.net/secure/RapidBoard.jspa?rapidView=2&projectKey=QA&selectedIssue=QA-90&atlOrigin=eyJpIjoiYzJiZDlkODk0NDY5NDJiNmE2ZGIyNDI5ZTQ1ZTY2NGMiLCJwIjoiaiJ9)
 
-**Github:** [Questival](https://github.com/aftongauntlett/Questival)
+**Github Repo:**
+
+ https://github.com/aftongauntlett/Questival
 
 **Deployed:**
-<!-- Link to heroku here -->
+
+https://questival.herokuapp.com/
 
 ## Description
 
@@ -23,8 +26,13 @@ Questival is designed to connect fellow attendees with conventions, festivals an
 * Handlebars
 * Git
 * Github
-* Jira
+* Jest
+
+## New Tech Used:
+* Jira (for some members of the team)
 * Heroku
+* ClearDB
+* Join Tables
 
 # Installation to Run Locally:
 
@@ -53,16 +61,17 @@ click on link provided in your terminal
 ## Tests
 <!-- Jest info here -->
 
-## Screenshot
-<!-- ![screenshot](https://) -->
-
-
-
 ### Collaborators
 * [Afton](https://github.com/aftongauntlett) 
 * [Tummanoon](https://github.com/tummanoon77) 
 * [Johnny](https://github.com/JuncongLiang) 
 * [Claudia](https://github.com/claudialoves)
+
+## Screenshot
+![screenshot](https://i.imgur.com/MEsBOc0.jpg)
+
+
+
 
 ## License
 
