@@ -1,22 +1,19 @@
-<div id="jumbotronMain" class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class="display-4 d-flex justify-content-center">Events!</h1>
-    </div>
-</div>
+<div id="banner" class="page-header">
+    <h1>Events!</h1>
 </div>
 
 <div id="eventList" class="d-flex flex-wrap justify-content-center">
+
     {{#each events}}
     <div id="listCards" class="card m-3">
         <div class="card-body">
-            <h2 class="card-title"><a href="/events/{{id}}">{{this.event_name}}</h2>
+            <a href="/events/{{id}}">{{this.event_name}}
         </div>
     </div>
     {{/each}}
 </div>
 
-{{!-- button to create a new event --}}
-<div class="d-flex justify-content-center pt-5">
-    <a href="/events/new" class="btn btn-dark btn-lg dark p-4" role="button" aria-pressed="true">Create a
+<div id="buttons" class="d-flex justify-content-center pt-5">
+    <a href="/events/new" class="btn btn-success btn-lg success p-4" role="button" aria-pressed="true">Create a
         new Event!</a>
 </div>

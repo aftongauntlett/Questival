@@ -55,7 +55,10 @@ body {
 
 .blurbFont {
         font-family: 'Raleway', sans-serif;
+}
 
+#buttons {
+    opacity: 80%;
 }
 
 .navbar {
@@ -66,7 +69,9 @@ body {
 }
 
 #listCards {
-    background-color: #c2d4dda8;
+    background-color: #c2d4ddd5;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
 }
 
 a {
@@ -78,4 +83,10 @@ a {
     color: black;
     font-family: 'Raleway', sans-serif;
     margin: 10px;
+}
+
+#banner {
+    background-color: rgba(194, 194, 194, 0.787);
+    margin: 10px;
+    margin-bottom: 20px;
 }
