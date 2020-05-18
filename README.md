@@ -77,7 +77,7 @@ click on link provided in your terminal
 
 MIT License
 
-Copyright (c) [2020] [Jenelle Langford, Andrew Bratcher , William Rave and Rachel Murray]
+Copyright (c) [2020] [Questival]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
