@@ -10,8 +10,6 @@ router.get("/users", function (req, res) {
     })
 })
 
-
-
 router.get("/users/:id", function (req, res) {
     user.getEventsUsersAndInterests(req.params.id, (result, events, interests) => {
         console.log(JSON.stringify(result))
@@ -42,6 +40,12 @@ router.get("/users/edit/:id", function (req, res) {
 
 router.post("/user/:id/interest/:interest_id", function (req, res) {
     user.addInterest(req.params.id, req.params.interest_id, function (resp) {
+        res.redirect("/users/" + req.params.id)
+    })
+})
+
+router.post("/user/:id/event/:event_id", function (req, res) {
+    user.addEvent(req.params.id, req.params.event_id, function (resp) {
         res.redirect("/users/" + req.params.id)
     })
 })

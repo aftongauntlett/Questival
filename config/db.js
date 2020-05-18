@@ -8,10 +8,10 @@ module.exports = {
         database: "questival_db"
     },
     heroku: {
-        host: "qn66usrj1lwdk1cc.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+        host: "us-cdbr-east-06.cleardb.net",
         port: 3306,
-        user: "iuu3k2kco9mjowpp",
-        password: "DB_PASSWORD",
-        database: "t4a1t4a2eeysw4u2",
+        user: "beead55ea48309",
+        password: process.env.DB_PASSWORD,
+        database: "heroku_fac058297c4f621",
     }
 }

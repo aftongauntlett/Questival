@@ -1,24 +1,38 @@
 <h2>{{user.attendee_name}}</h2>
-{{user.id}}
-<h5>event</h5>
+
+<h5>Event</h5>
 <div id="user">
     <ul>
         {{#each events}}
-        <li>
-            {{this.event_name}}
-        </li>
+        <div id="listCards" class="card m-3"></div>
+        <div class="card-body">
+            <li>
+                <form action="/user/{{../user.id}}/event/{{this.id}}" method="POST">
+                    <button type="submit">{{this.event_name}}</button>
+                </form>
+            </li>
+        </div>
         {{/each}}
     </ul>
 </div>
+
 <h5>interest</h5>
-<ul>
-    {{#each interests}}
-    <li>
+<div id="user" class="d-flex flex-wrap justify-content-center">
+    <ul>
+        {{#each interests}}
+        <div id="listCards" class="card m-3"></div>
+        <div class="card-body">
+            <li>
+                <form action="/user/{{../user.id}}/interest/{{this.id}}" method="POST">
+                    <button type="submit">{{this.interest}}</button>
+                </form>
+            </li>
+        </div>
+        {{/each}}
+    </ul>
+</div>
 
-        <form action="/user/{{../user.id}}/interest/{{this.id}}" method="POST">
-            <button type="submit">{{this.interest}}</button>
-        </form>
 
-    </li>
-    {{/each}}
-</ul>
+<div class="d-flex justify-content-center pt-5">
+    <a href="/user/new" class="btn btn-dark btn-lg dark p-4" role="button" aria-pressed="true">Back to Attendee</a>
+</div>
