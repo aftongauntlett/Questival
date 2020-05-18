@@ -9,7 +9,6 @@ const user = {
 
     getEventsUsersAndInterests(id, callback) {
         let query = "SELECT * FROM user WHERE id = " + id;
-        //     let userQuery = "SELECT * FROM user INNER JOIN users_events ON user.id = users_events.user_id where users_events.user_id = " + id;
         let eventQuery = "SELECT * FROM event INNER JOIN users_events ON event.id = users_events.event_id where users_events.user_id = " + id;
         let interestQuery = "SELECT * FROM interest INNER JOIN users_interest ON interest.id = users_interest.interest_id where users_interest.user_id = " + id;
 
@@ -44,6 +43,16 @@ const user = {
         })
     },
 
+    addEvent(user_id, event_id, callback) {
+        connection.query("INSERT INTO users_events SET ?", {
+            user_id,
+            event_id
+        }, function (err, resp) {
+            if (err) throw err;
+            callback(resp)
+        })
+    },
+
     get(id, callback) {
         let query = "SELECT * FROM user WHERE id = " + id;
         connection.query(query, (err, res) => {
@@ -51,7 +60,6 @@ const user = {
             callback(res)
         })
     }
-
 }
 
 module.exports = user;
