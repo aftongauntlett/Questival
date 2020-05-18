@@ -31,7 +31,7 @@ Questival is designed to connect fellow attendees with conventions, festivals an
 ## New Tech Used:
 * Jira (for some members of the team)
 * Heroku
-* ClearDB
+* CleanDB
 * Join Tables
 
 # Installation to Run Locally:
