@@ -29,17 +29,18 @@ The user is able to:
 * HTML/CSS
 * Bootstrap
 * JavaScript
+* Express
+* Handlebars
 * MySQL
 * Node.js
-* Handlebars
 * Git
 * Github
 * Jest
 
 ## New Tech Used:
-* Jira (for some members of the team)
+* Jira
 * Heroku
-* CleanDB
+* ClearDB
 * Join Tables
 
 # Installation to Run Locally:
