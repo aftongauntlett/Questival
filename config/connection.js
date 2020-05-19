@@ -7,7 +7,7 @@ var mysql = require("mysql");
 const config = require("./db");
 
 // Apply heroku config if node_env is production
-const connection = mysql.createConnection(process.env.NODE_ENV === 'production' ? config.heroku : config.db);
+const connection = mysql.createPool(process.env.NODE_ENV === 'production' ? config.heroku : config.db);
 
 
 // Export the connection.
